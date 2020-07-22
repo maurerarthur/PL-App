@@ -95,7 +95,7 @@ export default class App extends React.Component {
 					prevArrow={this.prevRound}
 					nextArrow={this.nextRound}
 				/>
-				<Matches round={this.state.currentMatchday} />
+				<Matches round={this.state.currentMatchday} navigation={this.props.navigation} />
 			</ScrollView>
 
 			:

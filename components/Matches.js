@@ -70,12 +70,16 @@ export default class Matches extends React.Component {
 
     }
 
+    MatchDetails = () => {
+        this.props.navigation.navigate("MatchesDetail");
+    }
+
     render() {
 
         return this.state.matches.map((items, i) => {
             return (
                 <ScrollView style={styles.container} key={i}>
-                    <TouchableOpacity style={styles.align}>
+                    <TouchableOpacity style={styles.align} onPress={this.MatchDetails}>
                         <Text>{items.homeTeamName}</Text>
                         <Text style={styles.matchResultsText}>
                             {items.fulltimeScore.homeTeam}
