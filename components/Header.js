@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StatusBar, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 
 export default class Header extends React.Component {
 
@@ -49,7 +49,6 @@ const styles = {
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-around",
-        marginTop: StatusBar.currentHeight
     },
 
     headerTitle: {
