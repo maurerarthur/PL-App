@@ -70,23 +70,25 @@ export default class Matches extends React.Component {
 
     }
 
-    MatchDetails = () => {
-        this.props.navigation.navigate("MatchesDetail");
+    MatchDetails = (details) => {
+        this.props.navigation.navigate("MatchesDetail", {
+            match: details
+        });
     }
 
     render() {
 
         return this.state.matches.map((items, i) => {
-            return (
+            return(
                 <ScrollView style={styles.container} key={i}>
-                    <TouchableOpacity style={styles.align} onPress={this.MatchDetails}>
-                        <Text>{items.homeTeamName}</Text>
+                    <TouchableOpacity style={styles.align} onPress={() => {this.MatchDetails(items)}}>
+                        <Text style={styles.teamsText}>{items.homeTeamName}</Text>
                         <Text style={styles.matchResultsText}>
                             {items.fulltimeScore.homeTeam}
                             x
                             {items.fulltimeScore.awayTeam}
                         </Text>
-                        <Text>{items.awayTeamName}</Text>
+                        <Text style={styles.teamsText}>{items.awayTeamName}</Text>
                     </TouchableOpacity>
                 </ScrollView>
             );
@@ -107,11 +109,17 @@ const styles = {
 
     align: {
         display: "flex",
-        flexDirection: "row"
+        flexDirection: "row",
+        flexWrap: "wrap"
+    },
+
+    teamsText: {
+        fontSize: 16
     },
 
     matchResultsText: {
-        letterSpacing: 5.5
+        letterSpacing: 5.5,
+        fontSize: 16
     },
 
 };

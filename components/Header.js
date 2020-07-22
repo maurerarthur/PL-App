@@ -9,7 +9,7 @@ export default class Header extends React.Component {
 
     render() {
 
-        return (
+        return(
 
             this.props.withArrows ?
 
@@ -45,7 +45,6 @@ const styles = {
         height: 60,
         width: "100%",
         backgroundColor: "#303030",
-        flex: 1,
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-around",
