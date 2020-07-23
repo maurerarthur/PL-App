@@ -1,9 +1,10 @@
 import React from 'react';
 import { ScrollView } from 'react-native';
 import axios from 'axios';
+import { token } from '../auth.json';
 import Header from './Header.js';
 import Matches from './Matches.js';
-import { token } from '../auth.json';
+import Footer from './Footer.js';
 
 export default class App extends React.Component {
 
@@ -96,6 +97,7 @@ export default class App extends React.Component {
 					nextArrow={this.nextRound}
 				/>
 				<Matches round={this.state.currentMatchday} navigation={this.props.navigation} />
+				<Footer navigation={this.props.navigation} />
 			</ScrollView>
 
 			:

@@ -16,10 +16,6 @@ export default class Matches extends React.Component {
 
     }
 
-    static navigationOptions = {
-        title: 'Home'
-    }
-
     componentDidMount() {
 
         axios.get(`https://api.football-data.org/v2/competitions/PL/matches?matchday=${this.props.round}`, {
