@@ -1,6 +1,7 @@
 import React from 'react';
 import { AsyncStorage, View, Text, StatusBar } from 'react-native';
 import DropDownPicker from 'react-native-dropdown-picker';
+import LocalNotification from '../src/notificationHandler.js';
 import axios from 'axios';
 import { token } from '../auth.json';
 
@@ -68,6 +69,8 @@ export default class SetTeam extends React.Component {
                         await AsyncStorage.setItem("favoriteTeam", item.value);
                         this.setState({
                             defaultPlaceholderValue: item.value
+                        }, () => {
+                            LocalNotification("Premier League APP", `${item.label} was set as your favorite team`);
                         });
                     }}
                 />

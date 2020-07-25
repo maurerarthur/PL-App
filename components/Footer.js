@@ -14,11 +14,8 @@ export default class Footer extends React.Component {
     render() {
         return(
             <View style={styles.container}>
-                <TouchableOpacity style={[styles.button, styles.buttonWithBorder]} onPress={this.setTeam}>
+                <TouchableOpacity style={styles.button} onPress={this.setTeam}>
                     <Text style={styles.buttonText}>Set Favorite Team</Text>
-                </TouchableOpacity>
-                <TouchableOpacity style={styles.button}>
-                    <Text style={styles.buttonText}>Favorite Team Stats</Text>
                 </TouchableOpacity>
             </View>
         );
@@ -38,14 +35,10 @@ const styles = {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
-        width: "50%",
+        width: "100%",
+        marginTop: 20,
         padding: 25,
         backgroundColor: "#303030",
-    },
-
-    buttonWithBorder: {
-        borderRightWidth: 1,
-        borderRightColor: "#FFFFFF"
     },
 
     buttonText: {

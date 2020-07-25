@@ -6,5 +6,6 @@ Premier League React Native app
 
 - [x] Create a new screen with all match details
 - [x] Let user set it's preferred team
-- [ ] Create a preferred team screen with it's details
+- [ ] Do Something with the user preferred team
+- [x] Implement push notifications
 - [ ] Change splash screen
