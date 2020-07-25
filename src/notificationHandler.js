@@ -7,7 +7,7 @@ export default LocalNotification = async (notificationTitle, notificationBody) =
     let notification = {
         title: notificationTitle,
         body: notificationBody,
-        priority:'max',
+        priority: 'max',
         vibrate: true,
     };
 
