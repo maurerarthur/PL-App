@@ -1,5 +1,6 @@
 import React from 'react';
 import { ScrollView, View, Text } from 'react-native';
+import moment from 'moment';
 import Header from './Header.js';
 
 export default class MatchesDetail extends React.Component {
@@ -22,7 +23,7 @@ export default class MatchesDetail extends React.Component {
                 <ScrollView style={styles.container}>
                     <View style={styles.alignColumn}>
                         <Text style={styles.matchday}>Matchday {detail.match.matchday}</Text>
-                        <Text style={styles.matchdate}>{new Date(detail.match.matchDate).toLocaleDateString("pt-br")}</Text>
+                        <Text style={styles.matchdate}>{moment(detail.match.matchDate).calendar()}</Text>
                         <View style={styles.align}>
                             <Text style={styles.matchFontSize}>{detail.match.homeTeamName}</Text>
                             <Text style={styles.matchResultsText}>

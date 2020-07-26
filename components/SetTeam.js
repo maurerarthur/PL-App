@@ -60,7 +60,7 @@ export default class SetTeam extends React.Component {
     render() {
         return(
             <View style={styles.viewStyle}>
-                <Text style={styles.title}>Select your favorite Premier League team</Text>
+                <Text style={styles.title}>Select your favorite Premier League team to get notified in a matchday</Text>
                 <DropDownPicker
                     placeholder={this.state.defaultPlaceholderValue}
                     containerStyle={{height: 50}}

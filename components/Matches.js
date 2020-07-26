@@ -32,13 +32,13 @@ export default class Matches extends React.Component {
                 info: results
             });
 
-            this.TreatInfoDate();
+            this.TreatInfoData();
 
         });
 
     }
 
-    TreatInfoDate = () => {
+    TreatInfoData = () => {
 
         let tempInfo = [];
 
