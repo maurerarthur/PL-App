@@ -10,3 +10,7 @@ Premier League React Native app
 - [x] Implement push notifications
 - [x] Change splash screen
 - [x] Change icon
+
+# Published Version
+
+https://expo.io/@arthur.maurer/pl-app
