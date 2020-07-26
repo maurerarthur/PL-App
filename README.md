@@ -14,3 +14,7 @@ Premier League React Native app
 # Published Version
 
 https://expo.io/@arthur.maurer/pl-app
+
+# Download Link
+
+https://exp-shell-app-assets.s3.us-west-1.amazonaws.com/android/%40arthur.maurer/pl-app-c082fe4d9dfa418a9130c4312ac88e4f-signed.apk
