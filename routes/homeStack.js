@@ -8,19 +8,34 @@ import SetTeam from '../components/SetTeam.js';
 
 const screens = {
     Home: {
-        screen: Home
+        screen: Home,
+        navigationOptions: {
+            title: "Home"
+        }
     },
     Matches: {
-        screen: Matches
+        screen: Matches,
+        navigationOptions: {
+            title: "Matches"
+        }
     },
     MatchesDetail: {
-        screen: MatchesDetail
+        screen: MatchesDetail,
+        navigationOptions: {
+            title: "Match Detail"
+        }
     },
     Footer: {
-        screen: Footer
+        screen: Footer,
+        navigationOptions: {
+            title: "Footer"
+        }
     },
     SetTeam: {
         screen: SetTeam,
+        navigationOptions: {
+            title: "Favorite Team"
+        }
     }
 };
 
