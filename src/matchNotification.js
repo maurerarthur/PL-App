@@ -11,7 +11,7 @@ export default MatchNotification = async (id) => {
         awayTeamScore: null
     };
 
-    axios.get(`https://api.football-data.org/v2/teams/${id}/matches?status=FINISHED&limit=1`, { //IN_PLAY
+    axios.get(`https://api.football-data.org/v2/teams/${id}/matches?status=IN_PLAY&limit=1`, {
 
         headers: {
             "X-Auth-Token": token
