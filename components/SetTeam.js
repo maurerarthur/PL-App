@@ -1,8 +1,9 @@
 import React from 'react';
 import { AsyncStorage, View, Text, StatusBar } from 'react-native';
 import DropDownPicker from 'react-native-dropdown-picker';
-import LocalNotification from '../src/notificationHandler.js';
 import axios from 'axios';
+import LocalNotification from '../src/notificationHandler.js';
+import MatchNotification from '../src/matchNotification.js';
 import { token } from '../auth.json';
 
 export default class SetTeam extends React.Component {
@@ -45,7 +46,7 @@ export default class SetTeam extends React.Component {
             res.data.teams.forEach(team => {
                 all_teams.push({
                     label: team.shortName,
-                    value: team.shortName
+                    value: team.id
                 });
             });
 
@@ -66,11 +67,13 @@ export default class SetTeam extends React.Component {
                     containerStyle={{height: 50}}
                     items={this.state.teams}
                     onChangeItem={async (item) => {
-                        await AsyncStorage.setItem("favoriteTeam", item.value);
+                        await AsyncStorage.setItem("favoriteTeam", item.label);
+                        await AsyncStorage.setItem("favoriteTeamId", JSON.stringify(item.value));
                         this.setState({
-                            defaultPlaceholderValue: item.value
+                            defaultPlaceholderValue: item.label
                         }, () => {
                             LocalNotification("Premier League APP", `${item.label} was set as your favorite team`);
+                            MatchNotification(item.value);
                         });
                     }}
                 />
