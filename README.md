@@ -4,4 +4,4 @@ Premier League React Native app
 
 # To Do
 
-- [] Fix the score font-spacing
+- [ ] Fix the score font-spacing
