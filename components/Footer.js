@@ -24,13 +24,11 @@ export default class Footer extends React.Component {
 }
 
 const styles = {
-
     container: {
         width: "100%",
         display: "flex",
         flexDirection: "row"
     },
-
     button: {
         display: "flex",
         justifyContent: "center",
@@ -38,12 +36,12 @@ const styles = {
         width: "100%",
         marginTop: 20,
         padding: 25,
-        backgroundColor: "#303030",
+        backgroundColor: "#00FF85"
     },
-
     buttonText: {
         color: "#FFFFFF",
+        fontSize: 17,
+        fontWeight: "bold",
         textTransform: "uppercase"
     }
-
 };

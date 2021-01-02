@@ -43,21 +43,18 @@ export default class MatchesDetail extends React.Component {
 }
 
 const styles = {
-
     container: {
         marginTop: 25,
         paddingRight: 10,
         paddingLeft: 10,
         paddingBottom: 10
     },
-
     alignColumn: {
         display: "flex",
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center"
     },
-
     align: {
         display: "flex",
         flexDirection: "row",
@@ -66,24 +63,19 @@ const styles = {
         marginTop: 25,
         flexWrap: "wrap"
     },
-
     matchFontSize: {
         fontSize: 18,
     },
-
     matchResultsText: {
         letterSpacing: 5.5,
         fontSize: 18
     },
-
     matchday: {
         fontSize: 25,
         marginTop: 10,
     },
-
     matchdate: {
         fontSize: 14,
         marginBottom: 15
     }
-
 };

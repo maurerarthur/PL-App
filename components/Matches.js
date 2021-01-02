@@ -73,7 +73,6 @@ export default class Matches extends React.Component {
     }
 
     render() {
-
         return this.state.matches.map((items, i) => {
             return(
                 <ScrollView style={styles.container} key={i}>
@@ -89,33 +88,27 @@ export default class Matches extends React.Component {
                 </ScrollView>
             );
         });
-
     }
 
 }
 
 const styles = {
-
     container: {
         marginTop: 25,
         paddingRight: 10,
         paddingLeft: 10,
         paddingBottom: 10
     },
-
     align: {
         display: "flex",
         flexDirection: "row",
         flexWrap: "wrap"
     },
-
     teamsText: {
         fontSize: 16
     },
-
     matchResultsText: {
         letterSpacing: 5.5,
         fontSize: 16
     },
-
 };

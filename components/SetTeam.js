@@ -84,17 +84,14 @@ export default class SetTeam extends React.Component {
 }
 
 const styles = {
-
     viewStyle: {
         marginTop: StatusBar.currentHeight,
         paddingLeft: 10,
         paddingRight: 10
     },
-
     title: {
         fontSize: 18,
         marginBottom: 20,
         alignSelf: "center"
     }
-
 };

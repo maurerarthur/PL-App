@@ -40,29 +40,26 @@ export default class Header extends React.Component {
 }
 
 const styles = {
-
     container: {
         height: 60,
         width: "100%",
-        backgroundColor: "#303030",
+        backgroundColor: "#00FF85",
         flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-around",
     },
-
     headerTitle: {
         color: "#FFFFFF",
-        fontSize: 18
+        fontWeight: "bold",
+        fontSize: 20,
     },
-
     button: {
         flex: 1,
         alignItems: "center"
     },
-
     buttonText: {
         color: "#FFFFFF",
-        fontSize: 20
+        fontWeight: "bold",
+        fontSize: 22
     }
-
 };

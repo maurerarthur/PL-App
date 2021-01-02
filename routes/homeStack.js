@@ -10,7 +10,11 @@ const screens = {
     Home: {
         screen: Home,
         navigationOptions: {
-            title: "Home"
+            title: "Home",
+            headerTintColor: "#FFFFFF",
+            headerStyle: {
+                backgroundColor: "#3D195B"
+            }
         }
     },
     Matches: {
@@ -22,7 +26,11 @@ const screens = {
     MatchesDetail: {
         screen: MatchesDetail,
         navigationOptions: {
-            title: "Match Detail"
+            title: "Match Detail",
+            headerTintColor: "#FFFFFF",
+            headerStyle: {
+                backgroundColor: "#3D195B"
+            }
         }
     },
     Footer: {
@@ -34,7 +42,11 @@ const screens = {
     SetTeam: {
         screen: SetTeam,
         navigationOptions: {
-            title: "Favorite Team"
+            title: "Favorite Team",
+            headerTintColor: "#FFFFFF",
+            headerStyle: {
+                backgroundColor: "#3D195B"
+            }
         }
     }
 };
