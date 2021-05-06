@@ -10,4 +10,4 @@ Premier League React Native app
 - [x] Implement push notifications
 - [x] Change splash screen
 - [x] Change icon
-- [ ] Refactor project to Functinal Components instead of Classes
+- [ ] Refactor project to Functional Components instead of Classes
