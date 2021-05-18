@@ -11,3 +11,4 @@ Premier League React Native app
 - [x] Change splash screen
 - [x] Change icon
 - [ ] Refactor project to Functional Components instead of Classes
+- [ ] Improve app design
