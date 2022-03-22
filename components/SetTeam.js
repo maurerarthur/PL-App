@@ -1,61 +1,50 @@
-import React from 'react';
-import { AsyncStorage, View, Text, StatusBar } from 'react-native';
-import DropDownPicker from 'react-native-dropdown-picker';
-import axios from 'axios';
-import LocalNotification from '../src/notificationHandler.js';
-import MatchNotification from '../src/matchNotification.js';
-import { token } from '../auth.json';
+import React from 'react'
+import { AsyncStorage, View, Text, StatusBar } from 'react-native'
+import DropDownPicker from 'react-native-dropdown-picker'
+import axios from 'axios'
+import LocalNotification from '../src/notificationHandler.js'
+import MatchNotification from '../src/matchNotification.js'
+import { token } from '../auth.json'
 
 export default class SetTeam extends React.Component {
-
     constructor(props) {
-
-        super(props);
+        super(props)
 
         this.state = {
             defaultPlaceholderValue: "Pick a team",
-            teams: [],
-        };
-
+            teams: []
+        }
     }
 
     getFavoriteTeam = async () => {
-
         if(await AsyncStorage.getItem("favoriteTeam")) {
             this.setState({
                 defaultPlaceholderValue: await AsyncStorage.getItem("favoriteTeam")
-            });
+            })
         }
-
     }
 
     componentDidMount() {
-
-        this.getFavoriteTeam();
+        this.getFavoriteTeam()
 
         axios.get(`https://api.football-data.org/v2/competitions/PL/teams`, {
-
             headers: {
-                "X-Auth-Token": token,
+                "X-Auth-Token": token
             }
-
         }).then(res => {
-
-            let all_teams = [];
+            let all_teams = []
 
             res.data.teams.forEach(team => {
                 all_teams.push({
                     label: team.shortName,
                     value: team.id
-                });
-            });
+                })
+            })
 
             this.setState({
                 teams: all_teams
-            });
-
-        });
-
+            })
+        })
     }
 
     render() {
@@ -67,20 +56,19 @@ export default class SetTeam extends React.Component {
                     containerStyle={{height: 50}}
                     items={this.state.teams}
                     onChangeItem={async (item) => {
-                        await AsyncStorage.setItem("favoriteTeam", item.label);
-                        await AsyncStorage.setItem("favoriteTeamId", JSON.stringify(item.value));
+                        await AsyncStorage.setItem("favoriteTeam", item.label)
+                        await AsyncStorage.setItem("favoriteTeamId", JSON.stringify(item.value))
                         this.setState({
                             defaultPlaceholderValue: item.label
                         }, () => {
-                            LocalNotification("Premier League APP", `${item.label} was set as your favorite team`);
-                            MatchNotification(item.value);
-                        });
+                            LocalNotification("Premier League APP", `${item.label} was set as your favorite team`)
+                            MatchNotification(item.value)
+                        })
                     }}
                 />
             </View>
-        );
+        )
     }
-
 }
 
 const styles = {
@@ -94,4 +82,4 @@ const styles = {
         marginBottom: 20,
         alignSelf: "center"
     }
-};
+}

@@ -1,26 +1,27 @@
-import React from 'react';
-import { View, TouchableOpacity, Text } from 'react-native';
+import React from 'react'
+import { View, TouchableOpacity, Text } from 'react-native'
 
 export default class Footer extends React.Component {
-
     constructor(props) {
-        super(props);
+        super(props)
     }
 
     setTeam = () => {
-        this.props.navigation.navigate("SetTeam");
+        this.props.navigation.navigate("SetTeam")
     }
 
     render() {
         return(
             <View style={styles.container}>
-                <TouchableOpacity style={styles.button} onPress={this.setTeam}>
+                <TouchableOpacity
+                    style={styles.button}
+                    onPress={this.setTeam}
+                >
                     <Text style={styles.buttonText}>Set Favorite Team</Text>
                 </TouchableOpacity>
             </View>
-        );
+        )
     }
-
 }
 
 const styles = {
@@ -44,4 +45,4 @@ const styles = {
         fontWeight: "bold",
         textTransform: "uppercase"
     }
-};
+}
